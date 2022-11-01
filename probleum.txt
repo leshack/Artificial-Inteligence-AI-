@@ -1,0 +1,9 @@
+**About the data:**
+
+The dataset contains about 10 years of daily weather observations from different locations across Australia. Observations were drawn from numerous weather stations. 
+
+In this project, I will use this data to predict whether or not it will rain the next day. There are 23 attributes including the target variable "RainTomorrow", indicating whether or not it will rain the next day or not. 
+
+**Now I will parse Dates into datetime.**
+
+My goal is to build an artificial neural network(ANN). I will encode dates appropriately, i.e. I prefer the months and days in a cyclic continuous feature. As, date and time are inherently cyclical. To let the ANN model know that a feature is cyclical I split it into periodic subsections. Namely, years, months and days. Now for each subsection, I create two new features, deriving a sine transform and cosine transform of the subsection feature. 
