@@ -3,6 +3,6 @@ numpy
 sklearn
 gunicorn
 pandas
-pickel4
+pickel
 requests
 scikit-learn
