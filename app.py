@@ -1,4 +1,4 @@
-from flask import Flask,request,jsonify
+from flask import Flask,request,jsonify,render_template
 import numpy as np
 import pickle
 model = pickle.load(open('model.pkl','rb'))
