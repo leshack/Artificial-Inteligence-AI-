@@ -12,6 +12,6 @@ def predict():
     features = [np.array(int_features)] 
     prediction = model.predict(features)  
     result = round(prediction[0], 2)
-    return jsonify({'prediction':str(result)})
+    return jsonify({'Percent with heart disease is':str(result)})
 if __name__ == '__main__':
     app.run()
