@@ -1,11 +1,8 @@
-# https://youtu.be/bluclMxiUkA
+
 """
 Multiple Linear Regression uses several explanatory variables to predict the outcome of a response variable.
 There are a lot of variables and multiple linear regression is designed to create a model 
 based on all these variables. 
-
-#Dataset link:
-https://cdn.scribbr.com/wp-content/uploads//2020/02/heart.data_.zip?_ga=2.217642335.893016210.1598387608-409916526.1598387608
 
 #Heart disease
 The effect that the independent variables biking and smoking 
@@ -60,10 +57,4 @@ model = pickle.load(open('model.pkl','rb'))
 print(model.predict([[20.1, 56.3]]))
 
 
-#Model is ready. Let us check the coefficients, stored as reg.coef_.
-#These are a, b, and c from our equation. 
-#Intercept is stored as reg.intercept_
-#print(model.coef_, model.intercept_)
 
-#All set to predict the number of images someone would analyze at a given time
-#print(model.predict([[13, 2, 23]]))
