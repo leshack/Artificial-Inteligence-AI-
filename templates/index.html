@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Exercise Intensity Recommender</title>
+    <style>
+        body {
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-color: grey;
+        }
+        h1 {
+            margin-top: 10px;
+            margin-bottom: 30px;
+            color: white;
+        }
+        label {
+            color: white;
+        }
+        .predicted-intensity {
+            background-color: black;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercise Intensity Recommender</h1>
+    <form action="{{ url_for('predict') }}" method="post">
+        <label for="gender">Gender</label>
+        <select id="gender" name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" step="1" required>
+
+        <label for="weather_conditions">Weather Conditions</label>
+        <select id="weather_conditions" name="weather_conditions">
+            <option value="Sunny">Sunny</option>
+            <option value="Cloudy">Cloudy</option>
+            <option value="Rainy">Rainy</option>
+        </select>
+
+        <label for="dream_weight">Dream Weight</label>
+        <input type="number" id="dream_weight" name="dream_weight" step="1" required>
+
+        <label for="actual_weight">Actual Weight</label>
+        <input type="number" id="actual_weight" name="actual_weight" step="1" required>
+
+        <label for="height">Height in meters</label>
+        <input type="number" id="height" name="height" step="0.01" required>
+
+        <label for="calorie_range">Select Calories Range to Burn</label>
+        <select id="calorie_range" name="calorie_range">
+            <option value="100 and Below">100 and Below</option>
+            <option value="101 to 200">101 to 200</option>
+            <option value="201 to 300">201 to 300</option>
+            <option value="301 to 400">301 to 400</option>
+            <option value="401 to 500">401 to 500</option>
+            <option value="501 to 600">501 to 600</option>
+            <option value="601 to 700">601 to 700</option>
+            <option value="701 to 800">701 to 800</option>
+            <option value="801 and Above">801 and Above</option>
+        </select>
+
+        <label for="duration">Duration in minutes</label>
+        <input type="number" id="duration" name="duration" step="1" required>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
