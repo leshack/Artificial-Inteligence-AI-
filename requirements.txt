@@ -1,4 +1,3 @@
---upgrade pip
 Flask==2.1.3
 numpy==1.21.6
 sklearn==0.0.post11
